@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<main>
+    <h1>Produtos foram cadastrados durante o start do programa</h1>
+    <ul>
+        <li th:each="produto : ${produtos}">
+            <span th:text="${produto.id}"></span>
+            <b>
+                <span th:text="${produto.nome}"></span>
+            </b>
+            R$
+            <span th:utext="${produto.preco}"></span>
+        </li>
+    </ul>
+</main>
+
+</body>
+</html>
